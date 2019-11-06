@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>list</title>
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+  <link rel="stylesheet" href="/libs/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="/css/list.css">
+</head>
+
+<body>
+  <div class="container">
+    <!-- 头 -->
+    <div class="row">
+      <div class="col-md-12 column">
+        <header></header>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-md-12 column">
+       <div class="productShow" id="productShow">
+        </div>
+        <script type="text/html" id="officeProductShow">
+          {{each images img index}}
+            <div class="singleProduct">
+                <a href="/html/details.html?id={{img.id}}">
+                  <div class="img">
+                    <img src="{{img.url}}">
+                  </div>
+                  <h3>{{img.title}}</h3>
+                  <p>{{img.desc}}</p>
+                  <span>立即购买 <b>></b></span>
+                </a>
+              </div>
+            {{/each}}
+        </script>
+      </div>
+    </div>
+
+  </div>
+  <!-- 尾 -->
+  <div class="container-fluid footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 column">
+          <footer></footer>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="/libs/require.min.js" data-main="/js/list"></script>
+
+</html>

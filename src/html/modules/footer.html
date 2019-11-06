@@ -1,0 +1,24 @@
+<script type="text/html" id="footer">
+  <div class="footerList">
+    {{each concent concent ondex}}
+    <ul>
+      <li>{{concent.concentone}}</li>
+      <li><a href="javascript:;">{{concent.concenttwo}}</a></li>
+      <li><a href="javascript:;">{{concent.concentthree}}</a></li>
+      <li><a href="javascript:;">{{concent.concentfour}}</a></li>
+      <li><a href="javascript:;">{{concent.concentfive}}</a></li>
+      <li><a href="javascript:;">{{concent.concentsix}}</a></li>
+      <li><a href="javascript:;">{{concent.concentseven}}</a></li>
+    </ul>
+    {{/each}}
+  </div>
+  <div class="footertail">
+    <span class="fa fa-map-marker">&nbsp;&nbsp;<a href="javascript:;">&nbsp;中文（中国）</a></span>
+    <span>&copy;Microsotf 2019</span>
+    <ul>
+      {{each tails tail index}}
+      <li><a href="javascript:;">{{tail.tail}}</a></li>
+      {{/each}}
+    </ul>
+  </div>
+</script>

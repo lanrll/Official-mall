@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>datails</title>
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+  <link rel="stylesheet" href="/libs/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="/css/details.css">
+</head>
+
+<body>
+  <div class="container">
+    <!-- 头 -->
+    <div class="row">
+      <div class="col-md-12 column">
+        <header></header>
+      </div> 
+    </div>
+    <div class="gotop fa fa-chevron-up">
+    </div>
+    <main>
+
+    </main>
+    <script type="text/html" id="productDetails">
+      <div class="details">
+        <div class="leftDetails">
+          <div class="img">
+            <img class="zoom-img" src="{{images[0].image}}" id="mediumImage">
+          </div>
+          <div class="imgList">
+            <button class="imgLeft fa fa-angle-left" id="imagesLeft"></button>
+            <button class="imgRight fa fa-angle-right" id="imagesRight"></button>
+            <div class="imgslide">
+              <ul id="imagesList">
+                {{each images img index}}
+                <li>
+                  <img src="{{img.image}}" id="smallImage">
+                </li>
+                {{/each}}
+              </ul>
+            </div>
+
+          </div>
+          <div class="desc1">
+            {{each descs desc index}}
+            <p>• {{desc.descone}}</p>
+            {{/each}}
+          </div>
+          <div class="desc2">
+            {{each promotions promotion index}}
+            <p>
+              <span class="fa fa-shopping-bag"></span>
+              <strong>【{{promotion.promotionone}}】</strong>
+              {{promotion.promotiontwo}}
+              <a href="">详情></a>
+            </p>
+            {{/each}}
+          </div>
+        </div>
+
+        <div class="rightDetails">
+          <div class="productTitle">
+            <h2>微软开学季</h2>
+            <h1>
+              <p>{{names[0].titleone}}</p>
+              <p>{{names[0].titletwo}}</p>
+            </h1>
+          </div>
+          <div class="productPrice">
+            <span>售价：</span>
+            <b> ￥1{{price}}</b>
+            <em>(14条评论)</em>
+            <em><i class="fa  fa-star"></i></em>
+            <em><i class="fa  fa-star"></i></em>
+            <em><i class="fa  fa-star"></i></em>
+            <em><i class="fa  fa-star"></i></em>
+            <em><i class="fa  fa-star"></i></em>
+          </div>
+          <div class="productSize">
+            <p class="titleP">请选择尺寸:</p>
+            <ul>
+              {{each sizes size index}}
+              <li>
+                <div class="CanBeSelected">{{size.sizeone}}.{{size.sizetwo}}英寸</div>
+              </li>
+              {{/each}}
+            </ul>
+          </div>
+          <div class="productTo-configure">
+            <p class="titleP">请选择配置:</p>
+            <ul>
+              {{each models model index}}
+              <li>
+                <div class="CanBeSelected">
+                  {{model.model}}
+                  <br>
+                  <span>¥ {{model.price}}</span>
+                </div>
+              </li>
+              {{/each}}
+            </ul>
+          </div>
+          <div class="productSet-meal">
+            <p class="titleP">请选择特惠套餐:</p>
+            <ul>
+              {{each meals meal index}}
+              <li>
+                <div class="CanBeSelected">
+                  <i>{{meal.meal}}</i>
+                  <br>
+                    <span>￥{{meal.priceone}}</span>
+                    <em>省￥{{meal.pricetwo}}</em>
+                </div>
+              </li>
+              {{/each}}
+            </ul>
+            <div class="set-meal-show clearfix">
+              <p>基础套餐内含：</p>
+              <ul>
+                {{each meals meal index}}
+                <li>
+                  <div class="img">
+                    <img src="{{meal.image}}" alt="">
+                  </div>
+                  <p>{{meal.mealdesc}}</p>
+                </li>
+                {{/each}}
+              </ul>
+            </div>
+          </div>
+          <div class="productGuarantee">
+            <p class="titleP">增值保障</p>
+            <button>适用于 Surface Book 的 Microsoft Complete 全方位服务计划 </button>
+            <span><a href="javascript:;">了解更多 ></a></span>
+          </div>
+          <div class="addShopCar">
+            <span id="addToCart">加入购物车</span>
+            <ul>
+              <li class="fa fa-universal-access"><a href="javascript:;">&nbsp;30天退还货</a></li>
+              <li class="fa fa-universal-access"><a href="javascript:;">&nbsp;急速上手服务</a></li>
+              <li class="fa fa-universal-access"><a href="javascript:;">&nbsp;24x7在线服务</a></li>
+              <li class="fa fa-universal-access"><a href="javascript:;">&nbsp;全场免运费</a></li>
+            </ul>
+            <div class="promotions">
+              <p>多品类旧机均可回收，旧机价值可用于换新。
+                <a href="javascript:;">为旧机估值></a>
+              </p>
+              <div class="img">
+                <img src="{{singleimage}}" alt="">
+              </div>
+            </div>
+          </div>
+          <a href="/html/cart.html" class="shopCart fa fa-shopping-cart" id="shopCart"><a>
+
+        </div>
+      </div>
+    </script>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 column">
+        <div class="datails">
+          <div class="subnav">
+            <ul>
+              <li><a href="#d1">主要特征</a></li>
+              <li><a href="#d2">技术规格</a></li>
+              <li><a href="#d3">包装与质保</a></li>
+              <li><a href="#d4">机型对比</a></li>
+              <li><a href="#d5">急速上手</a></li>
+              <li><a href="#d6">顾客评价</a></li>
+            </ul>
+          </div>
+          <div class="Main-characteristics">
+            <div class="datailsIntroduction" id="d1">
+              <img src="../images/banner1.webp">
+              <img src="../images/banner2.webp">
+              <img src="../images/banner3.webp">
+            </div>
+            <div class="datailsIntroduction clearfix" id="d2">
+
+            </div>
+            <script type="text/html" id="d2d">
+              <h2>技术规格</h2>
+              <ul>
+                {{each productName pN}}
+                <li>
+                  <span>{{pN.one}}:</span>
+                  <span>
+                    {{each productDesc pD}}
+                    {{pD.one}}
+                    <br>
+                    {{/each}}
+                  </span>
+                </li>
+                {{/each}}
+                <li>
+                  <span>中国能效标识</span>
+                  <span>
+                    {{each images img}}
+                    <div class="img">
+                      <img src="{{img.one}}">
+                    </div>
+                    {{/each}}
+                  </span>
+                </li>
+              </ul>
+            </script>
+            <div class="datailsIntroduction" id="d3">
+              <h2>包装与质保</h2>
+              <ul>
+                <li class="clearfix">
+                  <span>包装清单：</span>
+                  <span>
+                    Surface Book 2，电源，快速入门指南，安全和保修文件
+                    <br>
+                    注：集成 GPU 机型配备 39W 电源；独立 GPU 机型配备 95W 电源
+                  </span>
+                </li>
+                <li>
+                  保修：2 年有限硬件保修
+                </li>
+              </ul>
+            </div>
+            <div class="datailsIntroduction clearfix" id="d4">
+
+            </div>
+            <script type="text/html" id="d4d">
+              <h2>机型对比</h2>
+              <ul class="clearfix">
+                {{each contrast contrast}}
+                <li>
+                  <a href="/html/details.html?id={{contrast.id}}">
+                    <div class="img">
+                      <img src="{{contrast.one}}" alt="">
+                    </div>
+                    <b>{{contrast.two}}</b>
+                  </a>
+                </li>
+                {{/each}}
+              </ul>
+              <p>产品综述</p>
+              <ul class="clearfix">
+                <li>性能巨匠</li>
+                <li>更轻薄，跟灵活</li>
+                <li>外观时尚，性能出众</li>
+                <li>你的创意工作室</li>
+              </ul>
+              <p>核心参数</p>
+              {{each parameter parameter}}
+              <ol>
+                <li>
+                  {{parameter.one}}
+                  <br>
+                  {{parameter.two}}
+                  <br>
+                  {{parameter.three}}
+                  <br>
+                  {{parameter.four}}
+                  <br>
+                  {{parameter.five}}
+                  <br>
+                </li>
+              </ol>
+              {{/each}}
+            </script>
+            <div class="datailsIntroduction" id="d5">
+              <h2>急速上手</h2>
+              <img src="../images/banner1.webp">
+              <img src="../images/banner2.webp">
+            </div>
+            <div class="datailsIntroduction evaluate" id="d6">
+
+            </div>
+
+            <script type="text/html" id="d6d">
+              <h2>顾客评价</h2><b>发表评价</b>
+              <p>欢迎分享您对本商品的评价或使用心得！</p>
+              <ul class="evaluateList">
+                {{each evaluate evaluate}}
+                <li>
+                  <p>
+                    <span>{{evaluate.one}}</span>
+                    <span class="evaluateSatr">
+                      <i class="fa  fa-star"></i>
+                      <i class="fa  fa-star"></i>
+                      <i class="fa  fa-star"></i>
+                      <i class="fa  fa-star"></i>
+                      <i class="fa  fa-star"></i>
+                    </span>
+                  </p>
+                  <p>{{evaluate.two}}</p>
+                  <p>{{evaluate.three}}</p>
+                </li>
+                {{/each}}
+              </ul>
+              <nav aria-label="..." class="paging">
+                <ul class="pager">
+                  <li class="previous disabled" id="previous"><a href="javascript:;"><span
+                        aria-hidden="true">&larr;</span> Older</a></li>
+                  <li class="next" id="next"><a href="javascript:;">Newer <span aria-hidden="true">&rarr;</span></a>
+                  </li>
+                </ul>
+              </nav>
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- 尾 -->
+  <div class="container-fluid footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 column">
+          <footer></footer>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="/libs/require.min.js" data-main="/js/details"></script>
+
+</html>

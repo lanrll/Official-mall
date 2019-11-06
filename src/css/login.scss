@@ -1,0 +1,100 @@
+.bg{
+  width: 100%;
+  height: 100%;
+  background-color: #cccc;
+  background: url('/images/bglogin.jpg') no-repeat;
+  background-size: 100% 100%;
+  .login{
+    width: 400px;
+    height: 310px;
+    padding: 50px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: #ffffff;
+    .logo{
+      width: 130px;
+      height: 30px;
+      margin-bottom: 20px;
+      background-color: #ffffff; 
+      position: relative;
+      span{
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        right: -300px;
+        top: -20px;
+        font-size: 20px;
+        &:hover{
+          color: red;
+        }
+      }
+      a{
+        img{
+          width: 100%;
+        }
+      }
+    }
+    h2{
+      height: 35px;
+      line-height: 35px;
+      margin: 0;
+      span{
+        padding: 10px;
+        border: 1px solid #cccc;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+      .ac{
+        cursor: default;
+        background-color: #cccc;
+      }
+      // .bc:hover{
+      //   background-color: deepskyblue;
+      // }
+    }
+    input[type="text"]{
+      margin: 10px 0;
+      width: 100%;
+      height: 10%;
+      outline-style: none;
+      border-bottom: 1px solid #000000;
+    }
+    input[type="password"]{
+      margin: 10px 0;
+      width: 100%;
+      height: 10%;
+      outline-style: none;
+      font-size: 16px;
+      border-bottom: 1px solid #000000;
+    }
+    button{
+      width: 40%;
+      height: 10%;
+      margin: 0 15px;
+      margin-top: 50px;
+      border-radius: 5px;
+      outline-style: none;
+      cursor: pointer;
+      a{
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+      &:hover{
+        background-color: deepskyblue;
+      }
+    }
+    .clancelBtn{
+      &:hover{
+        background-color: red;
+        a{
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}

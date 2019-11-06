@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>首页</title>
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/libs/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+  <link rel="stylesheet" href="/libs/swiper/css/swiper.min.css">
+  <link rel="stylesheet" href="/css/index.css">
+</head>
+
+<body>
+  <div class="container">
+    <!-- 头 -->
+    <div class="row">
+      <div class="col-md-12 column">
+        <header></header>
+      </div>
+    </div>
+    <!-- 轮播 -->
+    <div class="row">
+      <div class="col-md-12 column">
+        <div class="banner swiper-container">
+          <div class="swiper-wrapper">
+
+          </div>
+        
+          <script type="text/html" id="banner">
+            {{each images img index}}
+            <div class="swiper-slide">
+              <a href="/html/details.html?id={{img.id}}">
+                <img src="{{img.url}}">
+              </a>
+              <div class="titlesome">
+                <h2>{{img.title}}</h2>
+                <p>{{img.desc}}</p>
+                <span>立享优惠 ></span>
+              </div>
+            </div>
+            {{/each}}
+          </script>
+          <!-- 如果需要分页器 -->
+          <div class="swiper-pagination"></div>
+
+          <!-- 如果需要导航按钮 -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
+        </div>
+      </div>
+    </div>
+    <!-- 产品展示 -->
+    <div class="row">
+      <div class="col-md-12 column">
+        <div class="productShow" id="productShow">
+
+        </div>
+
+        <script type="text/html" id="officeProductShow">
+          {{each images img index}}
+          <div class="singleProduct">
+            <a href="/html/details.html?id={{img.id}}">
+              <div class="img">
+                <img src="{{img.url}}">
+              </div>
+              <h3>{{img.title}}</h3>
+              <p>{{img.desc}}</p>
+              <span>立即购买 <b>></b></span>
+            </a>
+          </div>
+          {{/each}}
+        </script>
+      </div>
+    </div>
+    <!-- 广告 -->
+    <div class="row">
+      <div class="col-md-12 column">
+        <div>
+          <a href="#">
+            <img src="./images/banner4.webp">
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- 标题 -->
+    <div class="title">
+      <h2>适于工作地点</h2>
+    </div>
+    <!-- 产品展示 -->
+    <div class="row">
+      <div class="col-md-12 column">
+        <div class="productShow">
+
+        </div>
+      </div>
+    </div>
+    <!-- 轮播 -->
+    <div class="row">
+      <div class="col-md-12 column">
+        <div class="banner swiper-container">
+          <div class="swiper-wrapper">
+
+          </div>
+          <!-- 如果需要分页器 -->
+          <div class="swiper-pagination"></div>
+
+          <!-- 如果需要导航按钮 -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="guanzhu">
+      <p>关注Microsoft <a href=""><span class="fa fa-weixin"></span></a> <a href=""><span class="fa fa-weibo"></span></a>
+      </p>
+    </div>
+  </div>
+  <!-- 尾 -->
+  <div class="container-fluid footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 column">
+          <footer></footer>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</body>
+<script src="/libs/require.min.js" data-main="/js/index"></script>
+
+</html>

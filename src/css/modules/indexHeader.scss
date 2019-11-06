@@ -1,0 +1,207 @@
+nav{
+  height: 54px;
+  position: relative;
+  .logo{
+    height: 54px;
+    width: 137px;
+    float: left;
+    margin-right: 20px;
+    a{
+      float: left;
+      padding: 16px 6px 16px 10px;
+      height: 100%;
+      width: 137px;
+      img{
+        width: 87%;
+        display: block;
+      }
+    }
+  }
+  .menu{
+    float: left;
+    ul li{
+      float: left;
+      a{
+        text-decoration: none;
+        padding: 16px 8px 10px;
+        height: 48px;
+        display: inline-block;
+        color: rgb(100, 50, 50)
+      }
+      a:hover{
+        text-decoration-line: underline;
+        color: deepskyblue;
+      }
+    }
+  }
+  .login{
+    float: right;
+    .oneLogin{
+      .userLogin{
+        margin-right: 16px;
+        height: 50px;
+        line-height: 48px;
+        font-size: 16px;
+        cursor: pointer;
+        color: #262626;
+        background-color: #fff;
+      }
+    }
+    .alreadyLogin{
+      display: none;
+      .userLogin{
+        margin-right: 16px;
+        height: 50px;
+        line-height: 48px;
+        font-size: 16px;
+        cursor: pointer;
+        color: #f40;
+        background-color: #fff;
+      }
+    }
+    ul li{
+      float: left;
+      margin-right: 16px;
+      height: 50px;
+      line-height: 48px;
+      font-size: 16px;
+      .downMenu{
+        margin-right: 20px;
+        font-size: 14px;
+        cursor: pointer;
+        padding: 0 10px;
+        &:hover{
+          text-decoration-line: underline;
+          color: deepskyblue;
+        }
+      }
+      .hoverShow:hover{
+        color: deepskyblue;
+      }
+      .allProduct{
+        display: none;
+        position: absolute;
+        left: -3%;
+        width: 1230px;
+        // height: 308px;
+        background-color: #F2F2F2;
+        border-bottom:2px solid #000000;
+        z-index: 9;
+        ul{
+          width: 200px;
+          // height: 250px;
+          padding-left: 25px;
+          float: left;
+          margin-bottom: 60px;
+          li{
+            width: 100%;
+            height: 40px;
+            a{
+              float: left;
+              font-size: 14px;
+            }
+            
+          }
+        }
+        div{
+          position: absolute;
+          bottom: 0px;
+          left: 0;
+          width: 100%;
+          text-align: center;
+          background-color: #E6E6E6;
+          a{
+            font-size: 14px;
+          }
+        }
+      }
+      .searchout{
+        margin-right: 16px;
+        height: 50px;
+        line-height: 48px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      .shopCar{
+        margin-right: 16px;
+        height: 50px;
+        line-height: 48px;
+        font-size: 16px;
+        cursor: pointer;
+        color: #262626;
+        text-decoration: none;
+      }
+      
+      .loginuser{
+        // width: 100%;
+        li{
+          width: 100%;
+          height: 30px;
+          a{
+            float: left;
+            width: 100%;
+            text-align: center;
+          }
+        } 
+      }
+      form{
+        display: none;
+        height: 54px;
+        width: 1000px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 9;
+        input{
+          width: 884px;
+          height: 35px;
+          margin-left: 20px;
+          margin-top: 12px;
+          padding: 10px;
+          font-size: 12px;
+          border: 1px solid #000000;
+        }
+        ul{
+          width: 884px;
+          position: absolute;
+          top: 87%;
+          left: 19px;
+          background-color: white;
+          border: 1px solid #cccccc;
+        }
+        ul li{
+          height: 30px;
+          width: 100%;
+          line-height: 30px;
+          padding-left: 30px;
+        }
+        ul li:hover{
+          background-color: #ccc;
+        }
+        .search{
+          width: 20px;
+          height: 20px;
+          font-size: 16px;
+          border: none;
+          position: absolute;
+          top: 20px;
+          right: 110px;
+          background-color: #ffff;
+          cursor: pointer;
+        }
+        .cancle{
+          cursor: pointer;
+          font-size: 14px;
+          font-weight: 500;
+          border: none;
+          background: #ffffff;
+          height: 32px;
+          line-height: 32px;
+          position: absolute;
+          top: 10px;
+          right: 30px;
+        }
+      }
+    }
+  }
+}

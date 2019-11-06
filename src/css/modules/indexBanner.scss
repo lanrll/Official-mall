@@ -1,0 +1,87 @@
+.banner{
+  overflow: hidden;
+  position: relative;
+  height: 425px;
+  ul{
+    position: absolute;
+    left: 0;
+    right: 0;
+    li{
+      float: left;
+      img{
+        width: 100%;
+      }
+      div{
+        width: 400px;
+        height: 150px;
+        position: absolute;
+        left: 7%;
+        top: 10%;
+        h2{
+          font-size: 24px;
+          font-weight: 700;
+        }
+        p{
+          margin-bottom: 20px;
+          font-size: 15px ;
+        }
+        span{
+          padding: 10px 20px 6px 22px;
+          background-color: #000000;
+          color: #ffffff;
+          cursor: pointer;
+          &:hover{
+            text-decoration-line: underline;
+          }
+        }
+      }
+    }
+  }
+  ol{
+    position: absolute;
+    left: 45%;
+    bottom: 10px;
+    li{
+      float: left;
+      widows: 20px;
+      height: 20px;
+      line-height: 20px;
+      text-align: center;
+      margin-left: 5px;
+      cursor: pointer;
+      background-color: rgba(0, 0, 0, .4);
+      color: #ffffff;
+      border-radius: 10px;
+      z-index: 8;
+      &.ac{
+        box-shadow: 0px 0px 5px black;
+        color: aqua;
+        background-color: #f40;
+      }
+    }
+  }
+  &>a{
+    // display: none;
+    text-decoration: none;
+    position: absolute;
+    top: 45%;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    line-height: 38px;
+    color: #ccc;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    z-index: 8;
+    &:hover{
+      box-shadow: 0px 0px 5px black;
+    }
+  }
+  .goPrev{
+    left: 0;
+  }
+  .goNext{
+    right: 0;
+  }
+}

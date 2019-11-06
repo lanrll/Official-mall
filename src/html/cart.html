@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>shopCar</title>
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+  <link rel="stylesheet" href="/libs/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="/css/cart.css">
+</head>
+
+<body>
+  <div class="container">
+    <!-- 头 -->
+    <div class="row">
+      <div class="col-md-12 column">
+        <header></header>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12 column">
+        <div class="alert alert-warning" id="warning" role="alert">警告！你还没有登录,不能结算。
+            <a href="/html/login.html?0" class="alert-link">去登录></a>
+        </div>
+        <div class="cart">
+
+          <div class="leftCart">
+            <p>你的购物车内有<em id="productNum">0</em>件商品</p>
+            <div class="productCart">
+              <ul class="header">
+                <li>全选：
+                  <input type="checkbox" id="allCheck">
+                </li>
+                <li>商品图片</li>
+                <li>名称规格</li>
+                <li>数量</li>
+                <li>价格</li>
+                <li>小计</li>
+              </ul>
+              <div class="noOne">
+                你的购物车什么都还没都没有~~~<a href="/index.html">去逛逛></a>
+              </div>
+              <div class="singleProductShow">
+              </div>
+              <script type="text/html" id="productShowOne">
+                {{each cart cart index}}
+                <ul class="productShowOne" data-id="{{cart.id}}">
+                  <li>
+                    <input type="checkbox" class="checks" {{cart.check && "checked"}}>
+                  </li>
+                  <li>
+                    <div class="img">
+                      <img src="{{cart.images[0].image}}">
+                    </div>
+                    <b class="deleteProduct">删除商品</b>
+                  </li>
+                  <li>
+                    <a href="/html/details.html?id={{cart.id}}">{{cart.names[0].titleone}}</a>
+                    <p>电子下载版</p>
+                  </li>
+                  <li>
+                    <span class="reduce">-</span>
+                    <input type="text" value="{{cart.num}}" class="singleProductNum">
+                    <span class='increase'>+</span>
+                  </li>
+                  <li class="singleProductPrice">
+                    <span>￥<i>{{cart.price}}</i></span>
+                  </li>
+                  <li class="singleProductPrice">
+                    <span>￥<i>{{cart.price*cart.num}}</i></span>
+                  </li>
+                </ul>
+                {{/each}}
+              </script>
+            </div>
+          </div>
+          <div class="rightCart">
+            <div>总计<span>￥<i id="productPriceTotal">0</i>元</span></div>
+            <strong id="settlement" data-toggle="modal" data-target="#myModal">结算</strong>
+            <ul>
+              <li class="fa fa-universal-access"><a href="javascript:;">&nbsp;30天退还货</a></li>
+              <li class="fa fa-universal-access"><a href="javascript:;">&nbsp;急速上手服务</a></li>
+              <li class="fa fa-universal-access"><a href="javascript:;">&nbsp;24x7在线服务</a></li>
+              <li class="fa fa-universal-access"><a href="javascript:;">&nbsp;全场免运费</a></li>
+            </ul>
+            <p>全场包邮；16：00前订单当日发货，页面有提示的除外</p>
+            <p>支付方式：支付宝/微信支付/银联/货到付款</p>
+            <p>Office/Windows等软件密钥产品付款即得，售出不退换</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 尾 -->
+  <div class="container-fluid footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 column">
+          <footer></footer>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title" id="myModalLabel">支付</h4>
+        </div>
+        <div class="modal-body">
+          <div class="SettlementBackground">
+            <h3>来,扫码吧！！！</h3>
+            <img src="/images/loginQR.png" alt="">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">完成(没写)</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+  </div>
+
+</body>
+<script src="/libs/require.min.js" data-main="/js/cart"></script>
+
+</html>
